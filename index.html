@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Андрюха — Писюн</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: url('https://media.giphy.com/media/3oEduQAsYcJKQH2XsI/giphy.gif') center/cover no-repeat;
+      color: white;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      backdrop-filter: blur(4px);
+      padding: 20px;
+    }
+
+    h1 {
+      font-size: 8vw;
+      text-shadow: 2px 2px 6px #000;
+      margin: 0;
+    }
+
+    p {
+      font-size: 1.2em;
+      background: rgba(0, 0, 0, 0.5);
+      padding: 12px 20px;
+      border-radius: 12px;
+      max-width: 600px;
+      margin: 20px auto;
+    }
+
+    button {
+      background-color: #ff5e5e;
+      color: white;
+      border: none;
+      padding: 15px 25px;
+      font-size: 1.1em;
+      border-radius: 10px;
+      cursor: pointer;
+      box-shadow: 0 0 10px #000;
+      transition: 0.3s;
+      max-width: 80%;
+    }
+
+    button:hover {
+      background-color: #ff2e2e;
+    }
+
+    @media (max-width: 500px) {
+      h1 {
+        font-size: 10vw;
+      }
+
+      button {
+        padding: 12px 20px;
+        font-size: 1em;
+      }
+
+      p {
+        font-size: 1em;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>АНДРЮХА — ПИСЮН. ОФІЦІЙНО.</h1>
+  <p>Цей сайт підтверджує гіпотезу, яку ми давно підозрювали.</p>
+  <button onclick="showMeme()">Натисни, якщо теж так вважаєш</button>
+  <p id="meme"></p>
+
+  <script>
+    const memes = [
+      'Андрюха, зізнайся — це все через тебе!',
+      'Так ось чому сайт не працює нормально...',
+      'Мама казала: \"Синок, тримайся подалі від Андрюхи\"',
+      'Він вважав себе розумним, поки ми не зробили цей сайт.'
+    ];
+
+    function showMeme() {
+      const random = memes[Math.floor(Math.random() * memes.length)];
+      document.getElementById('meme').innerText = random;
+    }
+  </script>
+</body>
+</html>
